@@ -44,7 +44,7 @@ public class TestCase{
         }
         return data;
     }
-    @Test(dataProvider = "requestData")
+    @Test(dataProvider = "requestData",description = "接口测试")
     public void doRequest(RequestDTO requestDTO) {
         JSONObject jsonObject = JSONObject.parseObject(requestDTO.getParameters());
         JSONObject resp;

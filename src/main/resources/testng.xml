@@ -5,7 +5,11 @@
             <class name="com.wxl.apitest.testCase.TestCase"/>
         </classes>
     </test>
+<!--    <listeners>-->
+<!--        <listener class-name="com.wxl.apitest.Utils.MyExtentTestNgFormatter"/>-->
+<!--    </listeners>-->
+
     <listeners>
-        <listener class-name="com.wxl.apitest.Utils.MyExtentTestNgFormatter"/>
+        <listener class-name="com.wxl.apitest.Utils.ExtentTestNGIReporterListener"/>
     </listeners>
 </suite>
