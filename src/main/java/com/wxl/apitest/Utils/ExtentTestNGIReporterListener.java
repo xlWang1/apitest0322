@@ -10,7 +10,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.wxl.apitest.model.RequestDTO;
-import com.wxl.apitest.model.ResponseDTO;
 import org.testng.*;
 import org.testng.xml.XmlSuite;
 
@@ -27,8 +26,8 @@ public class ExtentTestNGIReporterListener implements IReporter {
     private ExtentReports extent;
     private void getTimeStamp() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-//        REPORT_NAME = "接口自动化测试报告_" + sdf.format(new Date());
-        REPORT_NAME = "APITESTRTPORT";
+        REPORT_NAME = "接口自动化测试报告_" + sdf.format(new Date());
+//        REPORT_NAME = "APITESTRTPORT";
         FILE_NAME = REPORT_NAME + ".html";
     }
 
