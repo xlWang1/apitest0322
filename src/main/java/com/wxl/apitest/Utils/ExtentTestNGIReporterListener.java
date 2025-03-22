@@ -9,6 +9,8 @@ import com.aventstack.extentreports.model.TestAttribute;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.wxl.apitest.model.RequestDTO;
+import com.wxl.apitest.model.ResponseDTO;
 import org.testng.*;
 import org.testng.xml.XmlSuite;
 
@@ -159,14 +161,9 @@ public class ExtentTestNGIReporterListener implements IReporter {
                 String name = "";
                 //如果有参数，则使用参数的toString组合代替报告中的name
                 for (Object param : parameters) {
-                    name += param.toString();
-                }
-                if (name.length() > 0) {
-                    if (name.length() > 50) {
-                        name = name.substring(0, 49) + "...";
-                    }
-                } else {
-                    name = result.getMethod().getMethodName();
+                    RequestDTO param1 = (RequestDTO) param;
+                    name = param1.getId() + "_" + param1.getDescription() + "_"
+                    + param1.getParameters();
                 }
                 if (extenttest == null) {
                     test = extent.createTest(name);
