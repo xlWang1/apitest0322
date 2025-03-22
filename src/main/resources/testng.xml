@@ -6,6 +6,6 @@
         </classes>
     </test>
     <listeners>
-        <listener class-name="com.wxl.apitest.Utils.ExtentTestNGIReporterListener"/>
+        <listener class-name="com.wxl.apitest.Utils.MyExtentTestNgFormatter"/>
     </listeners>
 </suite>
