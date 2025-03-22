@@ -25,7 +25,8 @@ public class ExtentTestNGIReporterListener implements IReporter {
     private ExtentReports extent;
     private void getTimeStamp() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-        REPORT_NAME = "接口自动化测试报告_" + sdf.format(new Date());
+//        REPORT_NAME = "接口自动化测试报告_" + sdf.format(new Date());
+        REPORT_NAME = "APITESTRTPORT";
         FILE_NAME = REPORT_NAME + ".html";
     }
 
