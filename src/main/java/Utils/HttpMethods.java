@@ -29,7 +29,7 @@ public class HttpMethods {
                     .custom()
                     .setDefaultCookieStore(cookieStore)
                     .setSSLSocketFactory(getSslConnectionSocketFactory())
-//                    .setProxy(new HttpHost("127.0.0.1", 8888))
+                    .setProxy(new HttpHost("127.0.0.1", 8888))
                     .build();
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,7 +52,7 @@ public class HttpMethods {
                 builder.addParameter(para.getKey(), (String) para.getValue());
             }
             HttpGet doGet = new HttpGet(builder.build());
-            Map<String, String> headers = Headers.getHeaders();
+            Map<String, String> headers = Headers.getInstance().getHeaders();
             for (Map.Entry<String,String> header: headers.entrySet()){
                 doGet.setHeader(header.getKey(), header.getValue());
             }
@@ -66,7 +66,7 @@ public class HttpMethods {
         CloseableHttpResponse response;
         try {
             HttpPost doPost = new HttpPost(uri);
-            for (Map.Entry<String,String> entry : Headers.getHeaders().entrySet()){
+            for (Map.Entry<String,String> entry : Headers.getInstance().getHeaders().entrySet()){
                 doPost.setHeader(entry.getKey(),entry.getValue());
             }
             StringEntity stringEntity = new StringEntity(JSONObject.toJSONString(params), "utf-8");

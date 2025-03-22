@@ -17,5 +17,6 @@ public class RequestDTO {
     private String contentType;
     private String exceptString;
     private String actual;
+    private String extractParameter;
 
 }

@@ -1,42 +1,37 @@
 package Utils;
-
 import Config.Config;
-
 import java.util.HashMap;
-import java.util.Map;
-
-public class Headers {
-    public static String Athorization;
-    public static String RequestId;
-    public static String TimeStamp;
-    public static HashMap<String, String> headers = new HashMap<>();
-    public static Map<String, String> getHeaders(){
-        headers.put("Accept", "application/json, text/plain, */*");
-        headers.put("Accept-Encoding", "gzip, deflate");
-        headers.put("Accept-Language", "zh-CN,zh;q=0.9");
-        headers.put("Authorization", Athorization);
-        headers.put("Connection", "keep-alive");
-        headers.put("Content-Type", "application/json");
-        headers.put("HOST", Config.HOST.split("://")[1]);
-        headers.put("Origin", Config.HOST);
-        headers.put("Platform", "MISSION");
-        headers.put("Referer",Config.HOST + "/busi/");
-        headers.put("Requestid", RequestId);
-        headers.put("Timestamp", TimeStamp);
-        headers.put("User-Agent",  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
+public class Headers{
+    private static final HashMap<String,String> headers = new HashMap<>();
+    private static String Cookie;
+    private static String Authorization;
+    private static final Headers instance = new Headers();
+    public static Headers getInstance(){
+        return instance;
+    }
+    public HashMap<String,String> getHeaders(){
+        headers.put("accept","application/json, text/plain, */*");
+        headers.put("accept-encoding","gzip, deflate");
+        headers.put("accept-language","zh-CN,zh;q=0.9");
+        headers.put("cache-control","no-cache");
+//        headers.put("content-length","71");
+        headers.put("content-type","application/json;charset=UTF-8");
+        headers.put("cookie",Cookie);
+        headers.put("host", Config.HOST.split("://")[1]);
+        headers.put("istoken","false");
+        headers.put("origin",Config.HOST);
+        headers.put("pragma","no-cache");
+        headers.put("proxy-connection","keep-alive");
+        headers.put("referer",Config.HOST + "/web/login?redirect=%2Fwelcome");
+        headers.put("user-agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36");
+        headers.put("authorization",Authorization);
         return headers;
     }
-
-
-    public static void setAthorization(String athorization) {
-        Athorization = athorization;
+    public void setCookie(String cookie){
+        Cookie = cookie;
     }
-
-    public static void setRequestId(String requestId) {
-        RequestId = requestId;
-    }
-
-    public static void setTimeStamp(String timeStamp) {
-        TimeStamp = timeStamp;
+    public void setAuthorization(String authorization){
+        Authorization = "Bearer " + authorization;
     }
 }
+

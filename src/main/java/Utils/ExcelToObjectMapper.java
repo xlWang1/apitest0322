@@ -42,7 +42,7 @@ public class ExcelToObjectMapper {
                         case "连接类型" -> RequestDTO.setContentType(cellValue);
                         case "预期结果" -> RequestDTO.setExceptString(cellValue);
                         case "实际结果" -> RequestDTO.setActual(cellValue);
-
+                        case "提取参数" -> RequestDTO.setExtractParameter(cellValue);
                     }
                 }
                 requestDTOs.add(RequestDTO);
