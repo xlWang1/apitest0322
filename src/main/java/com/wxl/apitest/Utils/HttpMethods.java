@@ -1,4 +1,4 @@
-package Utils;
+package com.wxl.apitest.Utils;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpHost;
 import org.apache.http.client.methods.CloseableHttpResponse;

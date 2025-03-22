@@ -1,4 +1,4 @@
-package model;
+package com.wxl.apitest.model;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.AllArgsConstructor;

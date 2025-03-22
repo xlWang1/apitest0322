@@ -1,13 +1,8 @@
-package model;
+package com.wxl.apitest.model;
 
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson2.JSON;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.ArrayList;
-import java.util.Map;
 
 @Data
 @AllArgsConstructor

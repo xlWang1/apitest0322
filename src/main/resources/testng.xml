@@ -2,7 +2,7 @@
 <suite name="Suite">
     <test name="Test">
         <classes>
-            <class name="com.wxl.test.testCases.LoginTest"/>
+            <class name="com.wxl.apitest.testCase.TestCase"/>
         </classes>
     </test>
 </suite>

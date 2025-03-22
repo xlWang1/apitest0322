@@ -1,4 +1,4 @@
-package Utils;
+package com.wxl.apitest.Utils;
 import org.json.JSONException;
 import org.skyscreamer.jsonassert.JSONCompare;
 import org.skyscreamer.jsonassert.JSONCompareMode;

@@ -1,8 +1,8 @@
-package testCase;
-import Utils.HttpMethods;
+package com.wxl.apitest.testCase;
+import com.wxl.apitest.Utils.HttpMethods;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import Config.Config;
+import com.wxl.apitest.Config.Config;
 public class BaseCase {
     public static HttpMethods httpMethods;
     @BeforeSuite

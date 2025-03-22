@@ -1,5 +1,5 @@
-package Utils;
-import Config.Config;
+package com.wxl.apitest.Utils;
+import com.wxl.apitest.Config.Config;
 import java.util.HashMap;
 public class Headers{
     private static final HashMap<String,String> headers = new HashMap<>();

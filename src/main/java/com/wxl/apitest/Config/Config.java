@@ -1,4 +1,4 @@
-package Config;
+package com.wxl.apitest.Config;
 
 import java.io.InputStream;
 import java.util.Properties;

@@ -1,11 +1,11 @@
-package testCase;
-import Config.Config;
-import Utils.ExcelToObjectMapper;
-import Utils.Headers;
-import Utils.HttpMethods;
+package com.wxl.apitest.testCase;
+import com.wxl.apitest.Config.Config;
+import com.wxl.apitest.Utils.ExcelToObjectMapper;
+import com.wxl.apitest.Utils.Headers;
+import com.wxl.apitest.Utils.HttpMethods;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPath;
-import model.RequestDTO;
+import com.wxl.apitest.model.RequestDTO;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -15,7 +15,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.util.List;
-import java.util.Objects;
 
 public class TestCase{
 
