@@ -29,7 +29,7 @@ public class HttpMethods {
                     .custom()
                     .setDefaultCookieStore(cookieStore)
                     .setSSLSocketFactory(getSslConnectionSocketFactory())
-                    .setProxy(new HttpHost("127.0.0.1", 8888))
+//                    .setProxy(new HttpHost("127.0.0.1", 8888))
                     .build();
         } catch (Exception e) {
             e.printStackTrace();
