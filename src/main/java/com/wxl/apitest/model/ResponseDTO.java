@@ -9,7 +9,6 @@ import lombok.Data;
 
 public class ResponseDTO {
     private JSONObject exception;
-
     public ResponseDTO(RequestDTO requestDTO) {
         JSONObject jsonObject = JSONObject.parseObject(requestDTO.getExceptString());
         for (String s : jsonObject.keySet()){

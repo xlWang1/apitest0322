@@ -161,7 +161,8 @@ public class ExtentTestNGIReporterListener implements IReporter {
                 //如果有参数，则使用参数的toString组合代替报告中的name
                 for (Object param : parameters) {
                     RequestDTO param1 = (RequestDTO) param;
-                    name = param1.getId() + "_" + param1.getDescription() + "_"
+                    name = param1.getId()
+                    + "_" + param1.getDescription() + "_"
                     + param1.getParameters();
                 }
                 if (extenttest == null) {
